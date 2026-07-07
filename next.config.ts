@@ -1,8 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Cloudflare Pages configuration
-  output: 'standalone',
   reactStrictMode: false,
   typescript: {
     ignoreBuildErrors: true,
