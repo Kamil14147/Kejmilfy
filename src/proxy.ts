@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { verifySessionToken, SESSION_COOKIE } from "@/lib/auth-edge";
 
-export async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   // Read session cookie
   const token = req.cookies.get(SESSION_COOKIE)?.value;
   const user = token ? await verifySessionToken(token) : null;
