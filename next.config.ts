@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Cloudflare Pages: do NOT use standalone output (CF has its own adapter)
+  // Cloudflare Pages configuration
+  output: 'standalone',
   reactStrictMode: false,
   typescript: {
     ignoreBuildErrors: true,
